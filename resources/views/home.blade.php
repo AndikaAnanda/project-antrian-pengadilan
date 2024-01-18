@@ -15,12 +15,12 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="/ptsp">
-                        <button type="button" class="btn btn-warning p-5 fs-2 border-white">PTSP</button>
+                        <button type="button" class="btn btn-success p-5 fs-2 border-white">PTSP</button>
                     </a>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <a href="/buku-tamu">
-                        <button type="button" class="btn btn-warning p-5 fs-2 border-white">Buku Tamu</button>
+                        <button type="button" class="btn btn-success p-5 fs-2 border-white">Buku Tamu</button>
                     </a>
                 </div>
             </div>

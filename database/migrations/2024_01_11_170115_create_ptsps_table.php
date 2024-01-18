@@ -13,7 +13,20 @@ return new class extends Migration
     {
         Schema::create('ptsps', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->integer('jumlah_antrian');
+            $table->enum('kategori_antrian', [
+                'umum',
+                'prioritas'
+            ]);
+            $table->enum('jenis_antrian', [
+                'umum_dan_keuangan',
+                'hukum',
+                'phi',
+                'tipikor',
+                'pidana',
+                'perdata', 
+            ]);
+            $table->date('tanggal')->useCurrent();
         });
     }
 

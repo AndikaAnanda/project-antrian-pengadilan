@@ -12,3 +12,5 @@ Update .env database value
 To refresh database state, use "php artisan migrate:fresh"
 
 if app ready for production, update APP_ENV value to "production"
+
+all routes are excluded from csrf middleware
