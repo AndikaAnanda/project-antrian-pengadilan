@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Inter&family=Poppins&display=swap");
 
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    overflow: hidden;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Abhaya Libre", serif;
 }
 
 video {
@@ -19,22 +18,37 @@ video {
 }
 
 .main-container {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 0.2rem;
-    width: 95%;
-    height: 70%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(17, 153, 142, 0.7) 35%,
+        rgba(56, 239, 125, 0.7) 100%
+    );
+    overflow: hidden;
 }
 
-button {
+.logo {
+  width: 120px;
+}
+
+.main-container h1 {
+  margin: 0;
+}
+
+.btn {
     width: 25rem;
     height: 12rem;
-    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     transition: 0.2s;
+    background-color: #F6F6F6;
+    color: black;
 }
 
 /* Button animation */
-button:hover {
+.btn:hover {
+    background-color: #FFBD00;
+    color: white;
     animation: glowing 1.5s infinite;
 }
 

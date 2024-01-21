@@ -6,21 +6,23 @@
 <video width="100%" controls muted loop autoplay>
     <source src="video/ptsp.mp4" type="video/mp4">
 </video>
-<div class="main-container pb-5">
+<div class="main-container container-fluid">
         <div class="container text-center mt-3 pb-1">
-            <img class="img-fluid" src="img/logo_pn.png" alt="Logo" width="100px">
-            <h1 class="text-dark fw-bold mt-3 animate__animated animate__bounce">PENGADILAN NEGERI PEKANBARU</h1>
+            <img class="img-fluid logo" src="img/logo_pn.png" alt="Logo">
+            <h2 class="h2 text-dark mt-3">Mahkamah Agung Republik Indonesia</h2>
+            <h1 class="text-dark fw-bold fw-semibold">PENGADILAN NEGERI PEKANBARU</h1>
+            <h2 class="h2 text-dark mt-3">Jl. Teratai No. 85, Sukajadi, Pekanbaru. (0761-22573)</h2>
         </div>
         <div class="container mt-5 pt-5 pb-5">
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="/ptsp">
-                        <button type="button" class="btn btn-success p-5 fs-2 border-white">PTSP</button>
+                        <button type="button" class="btn p-5 fs-2 btn-ptsp rounded-4 fw-semibold">PTSP</button>
                     </a>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <a href="/buku-tamu">
-                        <button type="button" class="btn btn-success p-5 fs-2 border-white">Buku Tamu</button>
+                        <button type="button" class="btn p-5 fs-2 btn-buku-tamu rounded-4 fw-semibold">Buku Tamu</button>
                     </a>
                 </div>
             </div>

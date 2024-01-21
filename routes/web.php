@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CallController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PtspController;
 use Illuminate\Support\Facades\Route;
@@ -18,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'show']);
 Route::get('/ptsp', [PtspController::class, 'show']);
 Route::post('/ptsp/update-antrian', [PtspController::class, 'incrementAntrian']);
-
+Route::get('/ptsp/call', [CallController::class, 'show']);
