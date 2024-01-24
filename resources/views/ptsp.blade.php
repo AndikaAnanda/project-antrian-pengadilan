@@ -11,7 +11,7 @@
                     <td>
                         <div class="square-button umum rounded-4" data-category="umum" data-type="umum_dan_keuangan">
                             <p class="title-umum rounded-top-4">UMUM & KEUANGAN</p>
-                            <p class="ticket ticket_umum_umum_dan_keuangan">A-{{ $antrian_umum_umum_dan_keuangan }}</p>
+                            <p class="ticket">A-{{ $antrian_umum_umum_dan_keuangan }}</p>
                             @include('partials/loading')
                         </div>
                     </td>

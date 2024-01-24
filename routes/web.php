@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'show']);
 Route::get('/ptsp', [PtspController::class, 'show']);
 Route::post('/ptsp/update-antrian', [PtspController::class, 'incrementAntrian']);
-Route::get('/ptsp/call', [CallController::class, 'show']);
+Route::get('/ptsp/admin/{antrian}', [PtspController::class, 'showAdmin']);
+

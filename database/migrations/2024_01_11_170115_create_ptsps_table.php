@@ -27,6 +27,10 @@ return new class extends Migration
                 'perdata', 
             ]);
             $table->date('tanggal')->useCurrent();
+            $table->enum('status_antrian', [
+                'proses',
+                'selesai'
+            ]);
         });
     }
 

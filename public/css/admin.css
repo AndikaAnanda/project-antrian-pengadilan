@@ -14,10 +14,6 @@ body {
     font-family: "Abhaya Libre", serif;
 }
 
-.logo {
-    width: 130px;
-}
-
 .square-button {
     display: block;
     width: 15rem;
@@ -31,6 +27,13 @@ body {
     cursor: pointer;
 }
 
+.square-button .title-umum {
+    background-color: #5ED25C
+}
+.square-button .title-prioritas {
+    background-color: #EC9B3B
+}
+
 .umum:hover {
     background-color: #FFBD00;
     color: white;
@@ -41,17 +44,10 @@ body {
     color: white;
     animation: glowing 1.5s infinite;
 }
-
 .ticket {
     font-size: 3rem;
 }
 
-.square-button .title-umum {
-    background-color: #5ED25C
-}
-.square-button .title-prioritas {
-    background-color: #EC9B3B
-}
 
 @keyframes glowing {
     0% {
