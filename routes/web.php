@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\CallController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PtspController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'show']);
 Route::get('/ptsp', [PtspController::class, 'show']);
 Route::post('/ptsp/update-antrian', [PtspController::class, 'incrementAntrian']);
-Route::get('/ptsp/admin/{antrian}', [PtspController::class, 'showAdmin']);
-
+Route::get('/ptsp/admin', [AdminController::class, 'index']);
+Route::get('/ptsp/call/show/{type}', [AdminController::class, 'showCall']);
+Route::get('/ptsp/call/update/{category}/{type}', [AdminController::class, 'update']);
+Route::get('/ptsp/recap', [AdminController::class, 'showRecap']);

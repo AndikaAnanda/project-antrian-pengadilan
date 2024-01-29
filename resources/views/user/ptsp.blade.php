@@ -1,4 +1,4 @@
-@extends('layouts/main')
+@extends('user/layouts/main')
 
 @section('content')
 <body>
@@ -12,7 +12,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="umum_dan_keuangan">
                             <p class="title-umum rounded-top-4">UMUM & KEUANGAN</p>
                             <p class="ticket">A-{{ $antrian_umum_umum_dan_keuangan }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -21,7 +21,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="hukum">
                             <p class="title-umum rounded-top-4">HUKUM</p>
                             <p class="ticket">B-{{ $antrian_umum_hukum }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -30,7 +30,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="phi">
                             <p class="title-umum rounded-top-4">PHI</p>
                             <p class="ticket">C-{{ $antrian_umum_phi }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -39,7 +39,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="tipikor">
                             <p class="title-umum rounded-top-4">TIPIKOR</p>
                             <p class="ticket">D-{{ $antrian_umum_tipikor }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -48,7 +48,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="pidana">
                             <p class="title-umum rounded-top-4">PIDANA</p>
                             <p class="ticket">E-{{ $antrian_umum_pidana }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -57,7 +57,7 @@
                         <div class="square-button umum rounded-4" data-category="umum" data-type="perdata">
                             <p class="title-umum rounded-top-4">PERDATA</p>
                             <p class="ticket">F-{{ $antrian_umum_perdata }}</p>
-                            @include('partials/loading')
+                            @include('user/partials/loading')
                         </div>
                     </td>
                 </tr>
@@ -77,7 +77,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="umum_dan_keuangan">
                                 <p class="title-prioritas rounded-top-4">UMUM & KEUANGAN</p>
                                 <p class="ticket">PA-{{ $antrian_prioritas_umum_dan_keuangan }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -86,7 +86,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="hukum">
                                 <p class="title-prioritas rounded-top-4">HUKUM</p>
                                 <p class="ticket">PB-{{ $antrian_prioritas_hukum }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -95,7 +95,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="phi">
                                 <p class="title-prioritas rounded-top-4">PHI</p>
                                 <p class="ticket">PC-{{ $antrian_prioritas_phi }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -104,7 +104,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="tipikor">
                                 <p class="title-prioritas rounded-top-4">TIPIKOR</p>
                                 <p class="ticket">PD-{{ $antrian_prioritas_tipikor }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -113,7 +113,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="pidana">
                                 <p class="title-prioritas rounded-top-4">PIDANA</p>
                                 <p class="ticket">PE-{{ $antrian_prioritas_pidana }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -122,7 +122,7 @@
                             <div class="square-button prioritas rounded-4" data-category="prioritas" data-type="perdata">
                                 <p class="title-prioritas rounded-top-4">PERDATA</p>
                                 <p class="ticket">PF-{{ $antrian_prioritas_perdata }}</p>
-                                @include('partials/loading')
+                                @include('user/partials/loading')
                             </div>
                         </td>
                     </tr>
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <script src="js/ptsp.js"></script>
+    <script src="/js/ptsp.js"></script>
     
 </body>
 

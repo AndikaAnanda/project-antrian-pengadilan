@@ -16,28 +16,9 @@ class PtspController extends Controller
 {
     // function for show the ptsp page
     public function show() {
-        return view('ptsp', [
+        return view('user/ptsp', [
             'title' => "Ptsp",
             'stylesheet' => 'ptsp',
-            'antrian_umum_umum_dan_keuangan'=> $this->getAntrian('umum', 'umum_dan_keuangan'),
-            'antrian_umum_hukum'=> $this->getAntrian('umum', 'hukum'),
-            'antrian_umum_phi'=> $this->getAntrian('umum', 'phi'),
-            'antrian_umum_tipikor'=> $this->getAntrian('umum', 'tipikor'),
-            'antrian_umum_pidana'=> $this->getAntrian('umum', 'pidana'),
-            'antrian_umum_perdata'=> $this->getAntrian('umum', 'perdata'),
-            'antrian_prioritas_umum_dan_keuangan'=> $this->getAntrian('prioritas', 'umum_dan_keuangan'),
-            'antrian_prioritas_hukum'=> $this->getAntrian('prioritas', 'hukum'),
-            'antrian_prioritas_phi'=> $this->getAntrian('prioritas', 'phi'),
-            'antrian_prioritas_tipikor'=> $this->getAntrian('prioritas', 'tipikor'),
-            'antrian_prioritas_pidana'=> $this->getAntrian('prioritas', 'pidana'),
-            'antrian_prioritas_perdata'=> $this->getAntrian('prioritas', 'perdata')
-        ]);
-    }
-
-    public function showAdmin(string $antrian) {
-        return view("admin-{$antrian}" , [
-            'title' => "Admin-{$antrian}",
-            'stylesheet' => 'admin',
             'antrian_umum_umum_dan_keuangan'=> $this->getAntrian('umum', 'umum_dan_keuangan'),
             'antrian_umum_hukum'=> $this->getAntrian('umum', 'hukum'),
             'antrian_umum_phi'=> $this->getAntrian('umum', 'phi'),
@@ -125,7 +106,7 @@ class PtspController extends Controller
             $nomorAntrian += 1;
             // Header
             $printer->text("Petugas  : RANDA\n");
-            $printer->text("Tanggal  : " . date('Y-m-d H:i:s') . "\n");
+            $printer->text("Tanggal  : " . date('d-m-Y H:i:s') . "\n");
             $printer->text("Kategori : $kategoriAntrian\n");
             $printer->text("Jenis    : $jenisAntrian\n");
             $printer->text("------------------------------------------------------\n");
