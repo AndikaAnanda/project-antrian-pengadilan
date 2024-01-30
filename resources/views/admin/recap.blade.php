@@ -4,7 +4,10 @@
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Rekap Data Antrian</h1>
-    @include('admin/partials/toolbar')
+    @include('admin/partials/toolbar', [
+      'time' => $time,
+      'timeTitle' => $timeTitle
+    ])
 </div>
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
@@ -26,7 +29,7 @@
             <td>{{ ucwords($data->kategori_antrian) }}</td>
             <td>{{ ucwords(str_replace('_', ' ', $data->jenis_antrian)) }}</td>
             <td>{{ $data->jumlah_antrian }}</td>
-            <td>{{ \Carbon\Carbon::parse($data->tanggal)->format('d-m-Y') }}</td>
+            <td>{{ $data->tanggal->format('d-m-Y') }}</td>
           </tr>
           @endforeach
         </tbody>

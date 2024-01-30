@@ -12,5 +12,11 @@ class Ptsp extends Model
     // disallow field id to be filled manually
     protected $guarded = ['id'];
 
+    // cast retrieved date to datetime object
+    protected $casts = [
+        'tanggal' => 'datetime'
+    ];
+
+    // disable default timestamps
     public $timestamps = false;
 }

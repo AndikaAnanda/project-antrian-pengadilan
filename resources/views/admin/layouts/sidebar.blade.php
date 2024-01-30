@@ -70,7 +70,7 @@
           </nav>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/ptsp/recap"><span data-feather="file-text"></span>Rekap Antrian</a>
+          <a class="nav-link" href="/ptsp/recap/today"><span data-feather="file-text"></span>Rekap Antrian</a>
         </li>
       </ul>
     </div>

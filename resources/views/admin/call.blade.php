@@ -13,8 +13,8 @@
             <th scope="col">Kategori</th>
             <th scope="col">Jenis</th>
             <th scope="col">Jml. Antrian</th>
-            <th scope="col">No. Dipanggil</th>
-            <th scope="col">Sisa</th>
+            <th scope="col">Telah Dipanggil</th>
+            <th scope="col">Sisa Antrian</th>
             <th scope="col">Panggil</th>
             <th scope="col">Panggil Ulang</th>
           </tr>
@@ -26,14 +26,14 @@
             <td>{{ ucwords(str_replace('_', ' ', $jenis)) }}</td>
             <td>{{ $jumlahAntrianPrioritas }}</td>
             <td>{{ $nomorDipanggilPrioritas = intval(file_get_contents("txt/prioritas/$jenis.txt")) }}</td>
-            <td>{{ $sisaPrioritas = $jumlahAntrianPrioritas - $nomorDipanggilPrioritas }}</td>
+            <td>{{ $sisaPrioritas = ($jumlahAntrianPrioritas - $nomorDipanggilPrioritas) }}</td>
             <td>
-                <button type="button" class="btn btn-primary btn-sm {{ $sisaPrioritas == 0 ? 'disabled' : '' }}" onclick="panggilAntrian('prioritas', '{{ $jenis }}')"><span data-feather="bell"></span>
+                <button type="button" class="btn btn-primary btn-sm {{ $sisaPrioritas == 0 ? 'disabled' : '' }}" onclick="panggilAntrian('prioritas', '{{ $jenis }}', {{ $nomorDipanggilPrioritas }}, false)"><span data-feather="bell"></span>
                     Panggil
                     </button>
             </td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm"><span data-feather="repeat"></span>
+                <button type="button" class="btn btn-danger btn-sm {{ $jumlahAntrianPrioritas == 0 ? 'disabled' : '' }}" onclick="panggilAntrian('prioritas', '{{ $jenis }}', {{ $nomorDipanggilPrioritas - 1 }}, true)"><span data-feather="repeat"></span>
                     Panggil Ulang
                     </button>
             </td>
@@ -44,14 +44,14 @@
             <td>{{ ucwords(str_replace('_', ' ', $jenis)) }}</td>
             <td>{{ $jumlahAntrianUmum }}</td>
             <td>{{ $nomorDipanggilUmum = intval(file_get_contents("txt/umum/$jenis.txt")) }}</td>
-            <td>{{ $sisaUmum = $jumlahAntrianUmum - $nomorDipanggilUmum }}</td>
+            <td>{{ $sisaUmum = ($jumlahAntrianUmum - $nomorDipanggilUmum) }}</td>
             <td>
-                <button type="button" class="btn btn-primary btn-sm {{ $sisaUmum == 0 || $sisaPrioritas != 0 ? 'disabled' : '' }}" onclick="panggilAntrian('umum', '{{ $jenis }}')"><span data-feather="bell"></span>
+                <button type="button" class="btn btn-primary btn-sm {{ $sisaUmum == 0 || $sisaPrioritas != 0 ? 'disabled' : '' }}" onclick="panggilAntrian('umum', '{{ $jenis }}', {{ $nomorDipanggilUmum }}, false)"><span data-feather="bell"></span>
                 Panggil
                 </button>
             </td>
             <td>
-                <button type="button" class="btn btn-danger btn-sm"><span data-feather="repeat"></span>
+                <button type="button" class="btn btn-danger btn-sm {{ $jumlahAntrianUmum == 0 ? 'disabled' : '' }}" onclick="panggilAntrian('umum', '{{ $jenis }}', {{ $nomorDipanggilUmum - 1 }}, true)"><span data-feather="repeat"></span>
                     Panggil Ulang
                     </button>
             </td>
